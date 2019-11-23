@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		let func = async function(){
+			let url ="http://localhost:3000/data";
+			let response = await fetch(url);
+
+			if (response.ok) {
+			  let json = await response.json();
+			  return json;
+			} else {
+			  alert("HTTP-Error: " + response.status);
+			}
+		}
+	func().then((res)=>{
+		var ul = document.getElementById("lstNames");
+		res.forEach((value, index)=>{
+			var li = "<li>" + value.empName +"</li>";
+			ul.innerHTML += li;
+		});
+	}).catch((err)=>{
+		console.log(err);
+	})
+	</script>
+</head>
+<body>
+	<ul id="lstNames">
+	</ul>
+</body>
+</html>
