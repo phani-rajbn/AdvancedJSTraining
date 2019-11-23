@@ -30,10 +30,6 @@ Exception handing in JS Functions.
 Asynchronous methods in JS
 CallBack Functions. 
 Async and Await. 
-Observables.
 JavaScript Web Security. 
 Cross Site Scripting(XSS).
 Cross-Site Request Forgery (CSRF)
-Server-side JavaScript Injection (SSJI)
-Code Execution: 
-Parsers and Engines of JS. 
