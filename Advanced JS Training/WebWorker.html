@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WEb Worker.html</title>
+	<script src="Common.js"></script>
+	<script type="text/javascript">
+		
+		function init(){
+		let worker = new Worker("workerExample.js");
+		worker.onmessage = function(arg){
+			$("data").innerText = arg.data;
+		}	
+		}
+		window.addEventListener("load", init)
+	</script>
+</head>
+<body>
+	<h1>Worker Thread Creation</h1>
+	<button id="btnClick">Invoke Thread</button>
+	<p id="data">
+
+	</p>
+</body>
+</html>
